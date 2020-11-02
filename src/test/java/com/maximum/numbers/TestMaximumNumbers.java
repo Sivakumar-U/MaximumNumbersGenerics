@@ -59,19 +59,19 @@ public class TestMaximumNumbers {
 	@Test
 	public void givenThreeString_MaxAtFirstPosition_ShouldReturnMaximumNumber() {
 		String maximumValue = maxNum.maximumNumber("Peach", "Apple", "Banana");
-		Assert.assertEquals((String) "Peach", maximumValue);
+		Assert.assertEquals("Peach", maximumValue);
 	}
 
 	@Test
 	public void givenThreeString_MaxAtSecondPosition_ShouldReturnMaximumNumber() {
 		String maximumValue = maxNum.maximumNumber("Apple", "Peach", "Banana");
-		Assert.assertEquals((String) "Peach", maximumValue);
+		Assert.assertEquals("Peach", maximumValue);
 	}
 
 	@Test
 	public void givenThreeString_MaxAtThirdPosition_ShouldReturnMaximumNumber() {
 		String maximumValue = maxNum.maximumNumber("Apple", "Banana", "Peach");
-		Assert.assertEquals((String) "Peach", maximumValue);
+		Assert.assertEquals("Peach", maximumValue);
 	}
 
 }
