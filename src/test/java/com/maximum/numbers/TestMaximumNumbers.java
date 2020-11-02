@@ -32,4 +32,10 @@ public class TestMaximumNumbers {
 		Assert.assertEquals((Integer) 10, maximumValue);
 	}
 
+	@Test
+	public void givenThreeIntegers_MaxAtThirdPosition_ShouldReturnMaximumNumber() {
+		Integer maximumValue = maxNum.maximumNumber(9, 8, 10);
+		Assert.assertEquals((Integer) 10, maximumValue);
+	}
+
 }
