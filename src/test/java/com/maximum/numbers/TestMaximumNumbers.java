@@ -4,71 +4,67 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class TestMaximumNumbers {
-//	static MaximumNumbers maxNum;
-//
-//	@BeforeClass
-//	public static void maximumNumberObj() {
-//		maxNum = new MaximumNumbers();
-//		System.out.println("In Before Class");
-//	}
-//
-//	@AfterClass
-//	public static void nullObj() {
-//		maxNum = null;
-//		System.out.println("In After Class");
-//	}
 
 	@Test
 	public void givenThreeIntegers_MaxAtFirstPosition_ShouldReturnMaximumNumber() {
-		Integer maximumValue = MaximumNumbers.maximumNumber(30, 15, 20);
+		MaximumNumbers<Integer> integerMaximumNumber = new MaximumNumbers<>(30, 15, 20);
+		Integer maximumValue = integerMaximumNumber.testMaximum();
 		Assert.assertEquals(Integer.valueOf(30), maximumValue);
 	}
 
 	@Test
 	public void givenThreeIntegers_MaxAtSecondPosition_ShouldReturnMaximumNumber() {
-		Integer maximumValue = MaximumNumbers.maximumNumber(15, 30, 20);
+		MaximumNumbers<Integer> integerMaximumNumber = new MaximumNumbers<>(15, 30, 20);
+		Integer maximumValue = integerMaximumNumber.testMaximum();
 		Assert.assertEquals(Integer.valueOf(30), maximumValue);
 	}
 
 	@Test
 	public void givenThreeIntegers_MaxAtThirdPosition_ShouldReturnMaximumNumber() {
-		Integer maximumValue = MaximumNumbers.maximumNumber(20, 15, 30);
+		MaximumNumbers<Integer> integerMaximumNumber = new MaximumNumbers<>(20, 15, 30);
+		Integer maximumValue = integerMaximumNumber.testMaximum();
 		Assert.assertEquals(Integer.valueOf(30), maximumValue);
 	}
 
 	@Test
 	public void givenThreeFloat_MaxAtFirstPosition_ShouldReturnMaximumNumber() {
-		Float maximumValue = MaximumNumbers.maximumNumber(50.5f, 30.7f, 10.5f);
+		MaximumNumbers<Float> floatMaximumNumber = new MaximumNumbers<>(50.5f, 30.7f, 10.5f);
+		Float maximumValue = floatMaximumNumber.testMaximum();
 		Assert.assertEquals(Float.valueOf(50.5f), maximumValue);
 	}
 
 	@Test
 	public void givenThreeFloat_MaxAtSecondPosition_ShouldReturnMaximumNumber() {
-		Float maximumValue = MaximumNumbers.maximumNumber(30.7f, 50.5f, 10.5f);
+		MaximumNumbers<Float> floatMaximumNumber = new MaximumNumbers<>(30.7f, 50.5f, 10.5f);
+		Float maximumValue = floatMaximumNumber.testMaximum();
 		Assert.assertEquals(Float.valueOf(50.5f), maximumValue);
 	}
 
 	@Test
 	public void givenThreeFloat_MaxAtThirdPosition_ShouldReturnMaximumNumber() {
-		Float maximumValue = MaximumNumbers.maximumNumber(30.7f, 10.5f, 50.5f);
+		MaximumNumbers<Float> floatMaximumNumber = new MaximumNumbers<>(30.7f, 10.5f, 50.5f);
+		Float maximumValue = floatMaximumNumber.testMaximum();
 		Assert.assertEquals(Float.valueOf(50.5f), maximumValue);
 	}
 
 	@Test
 	public void givenThreeString_MaxAtFirstPosition_ShouldReturnMaximumNumber() {
-		String maximumValue = MaximumNumbers.maximumNumber("Peach", "Apple", "Banana");
+		MaximumNumbers<String> stringMaximumNumber = new MaximumNumbers<>("Peach", "Apple", "Banana");
+		String maximumValue = stringMaximumNumber.testMaximum();
 		Assert.assertEquals("Peach", maximumValue);
 	}
 
 	@Test
 	public void givenThreeString_MaxAtSecondPosition_ShouldReturnMaximumNumber() {
-		String maximumValue = MaximumNumbers.maximumNumber("Apple", "Peach", "Banana");
+		MaximumNumbers<String> stringMaximumNumber = new MaximumNumbers<>("Apple", "Peach", "Banana");
+		String maximumValue = stringMaximumNumber.testMaximum();
 		Assert.assertEquals("Peach", maximumValue);
 	}
 
 	@Test
 	public void givenThreeString_MaxAtThirdPosition_ShouldReturnMaximumNumber() {
-		String maximumValue = MaximumNumbers.maximumNumber("Apple", "Banana", "Peach");
+		MaximumNumbers<String> stringMaximumNumber = new MaximumNumbers<>("Apple", "Banana", "Peach");
+		String maximumValue = stringMaximumNumber.testMaximum();
 		Assert.assertEquals("Peach", maximumValue);
 	}
 
