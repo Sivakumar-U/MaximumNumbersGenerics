@@ -43,10 +43,16 @@ public class TestMaximumNumbers {
 		Float maximumValue = maxNum.maximumNumber(10.5f, 9.5f, 8.5f);
 		Assert.assertEquals((Float) 10.5f, maximumValue);
 	}
-	
+
 	@Test
 	public void givenThreeFloat_MaxAtSecondPosition_ShouldReturnMaximumNumber() {
 		Float maximumValue = maxNum.maximumNumber(9.5f, 10.5f, 8.5f);
+		Assert.assertEquals((Float) 10.5f, maximumValue);
+	}
+	
+	@Test
+	public void givenThreeFloat_MaxAtThirdPosition_ShouldReturnMaximumNumber() {
+		Float maximumValue = maxNum.maximumNumber(9.5f, 8.5f, 10.5f);
 		Assert.assertEquals((Float) 10.5f, maximumValue);
 	}
 
