@@ -17,7 +17,13 @@ public class MaximumNumbers<T extends Comparable> {
 
 	public T testMaximum() {
 		Arrays.sort(valueArray);
+		printMax(valueArray.length - 1);
 		return valueArray[valueArray.length - 1];
+
+	}
+
+	private static <T> void printMax(T maximumNumbers) {
+		System.out.println("Maximum Value:" + maximumNumbers);
 
 	}
 }
