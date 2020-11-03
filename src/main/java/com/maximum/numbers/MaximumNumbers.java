@@ -1,22 +1,23 @@
 package com.maximum.numbers;
 
-public class MaximumNumbers<E extends Comparable<?>> {
-	E num1;
-	E num2;
-	E num3;
+import java.util.Arrays;
 
-	public MaximumNumbers(E num1, E num2, E num3) {
-		this.num1 = num1;
-		this.num2 = num2;
-		this.num3 = num3;
+public class MaximumNumbers<T extends Comparable> {
+	T[] valueArray;
+
+	public MaximumNumbers(T... value) {
+		T[] array = (T[]) new Comparable[value.length];
+		int i = 0;
+		for (T val : value) {
+			array[i] = val;
+			i++;
+		}
+		this.valueArray = array;
 	}
 
-	public <E extends Comparable<?>> E testMaximum() {
-		E max = (E) num1;
-		if (num2.toString().compareTo(max.toString()) > 0)
-			max = (E) num2;
-		if (num3.toString().compareTo(max.toString()) > 0)
-			max = (E) num3;
-		return max;
+	public T testMaximum() {
+		Arrays.sort(valueArray);
+		return valueArray[valueArray.length - 1];
+
 	}
 }
